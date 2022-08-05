@@ -1,0 +1,728 @@
+/*
+Theme Name: MaddenBase
+Theme URI: https://www.fiverr.com/aslamshah111?up_rollout=true
+Author: Eng. Sayed Aslam Shah
+Author URI: https://www.fiverr.com/aslamshah111?up_rollout=true
+Description: MaddenBase is a WordrPress theme mainly developed for gammers.
+Tags: maddenbase, maddenbase.com, video games, online streaming, twitch, youtube streaming, esports, live streaming
+Version: 2.0
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: maddenbase
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/** <=== Global CSS ===> **/
+
+img {
+    max-width: 100%;
+}
+
+
+.feature img {
+    /* override max width so feature image spans full width of screen */
+    width: 100%;
+}
+
+body a {
+	color: #bf1500;
+}
+.blog-post img {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+.row {
+    margin: 0px;
+    
+}
+.col {
+    margin: 0px;
+}
+
+/* Fonts settings */
+@font-face {
+font-family: "FontAwesome";
+src: url("/Assets/@font-face/061b39e95e1a0bd25e8d294af8596b2a.eot");
+src: url("/Assets/@font-face/061b39e95e1a0bd25e8d294af8596b2a.woff") format("woff"),
+url("/Assets/@font-face/061b39e95e1a0bd25e8d294af8596b2a.ttf") format("opentype"),
+url("/Assets/@font-face/061b39e95e1a0bd25e8d294af8596b2a.svg") format("svg");
+}
+
+
+
+body {
+    font-family: FontAwesome;
+}
+#webWrapper {
+    max-width: 1800px;
+    margin: 0 auto;
+   
+    
+}
+#webHeader {
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 30px 0px;
+    
+    
+}
+#webHeader img {
+    width:362.2px;
+    height: 61.5px;
+    margin: 0 auto;
+}
+#webNav {
+    background-color:#000000;
+}
+#webNav .text-white {
+    background-color: #000000 !important;
+}
+.bg-light {
+    background-color: #000000!important;
+    color: #FFFFFF !important;
+}
+.bg-light a {
+     font-weight: bold;
+    color: #FFFFFF !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    
+}
+.bg-light li {
+    margin-left: 0px;
+    
+  padding: 0px 0px;
+    
+}
+.bg-light a:hover {
+     font-weight: bold;
+    
+    padding-left: 15px !important;
+    padding-right: 15px !important;;
+    color: #efd096 !important;
+}
+.bg-light ul ul {
+	background-color:#555555;
+}
+.active {
+    font-weight: bold;
+    color: #FFFFFF !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    background-color: #bf1500 !important;
+}
+#navbarSupportedContent {
+    text-align: center!important;
+}
+#navbarSupportedContent .navbar-nav ul {
+    text-align: center !important;
+
+
+}
+#menu-main-menu {
+	padding-right: 0px;
+	
+}
+
+.main-contents form input {
+    display: block;
+    padding: 5px;
+     border: 1px solid #000000;
+
+}
+.main-contents label {
+   margin-top: 15px;
+    margin-bottom: 5px;
+}
+.main-contents .form-container {
+  display: block;
+    text-align: center;
+}
+.main-contents .form-container form {
+    margin-top: 15px;
+   
+  display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+   
+}
+
+.main-contents form input[type=submit] {
+    padding: 5px  10px;
+    margin: 0 auto;
+    margin-top: 15px;
+    border: 1px solid #000000;
+    
+    
+}
+#specifInput {
+    margin-top: 0px !important;
+    
+}
+#specicLabel {
+      margin-top: 15px !important;
+}
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+/* FOR MUT and FRANCHISE GENERAL ============================== */
+.hover {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 60%;
+}
+
+.hover-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  transition: all 0.4s;
+}
+
+.hover img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.hover-content {
+  position: relative;
+  z-index: 99;
+}
+
+/* MUT and FRANCHISE SPECIFIC ============================== */
+.hover-3::after {
+  content: '';
+  width: calc(100% - 3rem);
+  height: calc(100% - 3rem);
+  border: 1px solid #fff;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 90;
+  transition: all 0.3s;
+  transform: scale(1.1);
+  opacity: 0;
+  display: block;
+  opacity: 0;
+}
+
+.hover-3-content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 99;
+}
+
+.hover-3-description {
+  opacity: 0;
+  transform: scale(1.3);
+  transition: all 0.3s;
+}
+
+.hover-3 img {
+  width: 110%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hover-3 .hover-overlay {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0px !important;
+}
+
+.hover-3:hover img {
+  width: 100%;
+	margin: 0px !important;
+}
+
+.hover-3:hover::after {
+  opacity: 1;
+  transform: none;
+}
+
+.hover-3:hover .hover-3-description {
+  opacity: 1;
+  transform: none;
+}
+
+.hover-3:hover .hover-overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+.custom-padding {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+}
+
+ 
+    #webFooter {
+    background-color: #bf1500;
+    text-align: center;
+        padding: 10px;
+        color: #FFFFFF;
+        
+   
+}
+
+.user-profile-custom {
+    margin-top: 35px;
+    
+}
+.user-profile-custom .btn-dark {
+    background-color: #bf1500!important;
+    margin-top: 50px;
+}
+.user-profile-custom .btn-dark:hover {
+    background-color:rgba(191, 21, 0, 0.8)!important;
+    
+}
+.user-profile-custom p {
+    margin-bottom: 0px;
+}
+.user-profile-custom .profile-user-name {
+    margin-top: 0px;
+}
+#loading{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: #fff
+	url('Assets/preloader.gif')
+	 no-repeat center center;	
+	z-index: 99999;
+}
+
+@media only screen and (max-width: 992px) {
+    #shuffleParent {
+        display: flex;
+        flex-direction: column;
+         
+       
+        
+        
+        
+    }
+    #shuffle {
+        order: 2;
+       
+        
+    }
+    #shuflle1 {
+        margin:  0 auto!important;
+       
+        order: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*********************** Demo - 20 *******************/
+.box20,.box20 .icon li a{overflow:hidden}
+.box20 {box-shadow:0 0 5px #a3a3a3}
+.box20 .post,.box20 .title{text-transform:capitalize; width:60%;}
+.box20{position:relative}
+.box20:after,.box20:before{position:absolute;content:""}
+.box20:before{width:80%;height:220%;background:#41280f;top:-50%;left:-100%;z-index:1;transform:rotate(25deg);transform-origin:center top 0;transition:all .5s ease 0s}
+.box20.blue:before{background:#41280f!important;}
+.box20.red:before{background:#b31d23!important;}
+.box20.yellow:before{background:#efc203!important;}
+.box20:hover:before{left:10%}
+.box20:after{width:55%;height:175%;background-color:rgba(0,0,0,.8);bottom:-1000%;left:53%;transform:rotate(-33deg);transform-origin:center bottom 0;transition:all .8s ease 0s}
+.box20 .box-content,.box20 .icon{width:100%;padding:0 20px;position:absolute;left:0;z-index:2;transition:all 1.1s ease 0s}
+.box20:hover:after{bottom:-70%}
+.box20 img{width:100%;height:auto}
+.box20 .box-content{top:-100%;color:#fff}
+.box20:hover .box-content{top:30px}
+.box20 .title{font-size:20px;margin:0}
+.box20 .icon li a,.box20 .post{display:inline-block;font-size:14px}
+.box20 .post{margin-top:5px}
+.box20 .icon{list-style:none;margin:0;bottom:-100%}
+.box20:hover .icon{bottom:25px}
+.box20 .icon li{display:inline-block}
+.box20 .icon li a{width:35px;height:35px;line-height:35px;background:#ff0000;border-radius:50%;margin:0 3px;color:#fff;text-align:center;transition:all .5s ease 0s}
+.box20 .icon li a:hover{background:#fff;}
+.box20 .button {background-color:#8e909b;border-radius:3px;display:inline-block;padding:6px 12px;margin-top:10px;}
+.box20 .button:hover {background-color:#000000;}
+.box20 a, box20 a:link, box20 a:visited, box20 a:hover, box20 a:active {color:#ffffff!important;}
+.icon {display:inline-block;height:60px;width:auto;}
+.fas {font-size:32px;background-color:rgba(0,0,0,.1);border-radius:100px;height:55px;width:55px;line-height:55px;display:inline-block;vertical-align:middle;text-align:center;}
+.circle-icon {background: rgba(0,0,0,.1);width: 66px;height: 66px;border-radius: 50%;text-align: center;line-height: 50px;vertical-align: middle;padding: 15px;}
+h2.sector {font-size:26px;color:#555555;}
+
+@media only screen and (max-width:990px){
+    .box20{margin-bottom:30px}
+    .box20 .title{font-size:16px}
+}
+@media only screen and (max-width:479px){.box20 .title{font-size:16px}
+}
+
+#maddenFranchisePage .row1 {
+   
+    margin-bottom: 8px;
+}
+#maddenFranchisePage .row {
+  
+    padding: 10px 0px;
+}
+#maddenFranchisePage .col-custom {
+   padding: 0px;
+}
+#maddenFranchisePage .row2, #maddenFranchisePage .row3 {
+    padding: 10px 15px;
+}
+#maddenFranchisePage h3 {
+   
+}
+
+
+
+
+
+
+
+
+
+/** Filter CSS for the website **/
+
+#searchInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 33%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#memListTable {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full-width */
+  border: 1px solid #ddd; /* Add a grey border */
+  font-size: 18px; /* Increase font-size */
+}
+
+#memListTable th, #memListTable td {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+}
+
+#memListTable tr {
+  /* Add a bottom border to all table rows */
+  border-bottom: 1px solid #ddd;
+}
+
+#memListTable tr.header, #memListTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background-color: #f1f1f1;
+}
+.addposts  {
+margin: 0 auto !important;
+width: 200px;
+    height: 100px;
+    background-color: #bf1500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.addposts a {
+padding: 0 auto;
+    color: #FFFFFF;
+    font-size: 25pt;
+
+    
+}
+.addposts a:hover {
+padding: 0 auto;
+   
+    font-size: 25pt;
+    color: #efd096 !important;
+    text-decoration: none;
+
+    
+}
+#responivePostsTable {
+    padding: 0px 0px !important;
+}
+
+.page-item.active .page-link {
+    background-color:#bf1500 !important;
+    border: 1px solid black;
+}
+@media only screen and (max-width: 1600px) and (min-width: 992px) {
+    .dataTables_info {
+    margin-top: 45px !important;
+
+    
+}
+   
+.dataTables_paginate { 
+   
+}
+}
+
+
+
+/* === BLOG ===*/
+.blog-post-title {
+    background: url('images/divider-purple.png') center no-repeat;
+    height: 80px;
+    background-size: 300px 40px;
+    /* center on x 35px on y*/
+    background-position: center 35px;
+    margin-bottom: 30px;
+}
+
+.blog-post {
+    border: 1px solid #494646;
+    border-radius: 10px;
+    margin: 30px 0;
+    padding: 20px;
+}
+
+.blog-post img {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* === BLOG-SIDEBAR ===*/
+.sidebar-module {
+    border: 1px solid #494646;
+    border-radius: 10px;
+    margin: 30px 0px;
+	width: 100%;
+    padding: 20px;
+}
+
+.blog-post-title a {
+    color: #494646;
+}
+
+/* === ABOUT US SECTION ===*/
+#about {
+    padding-bottom: 30px;
+    /* text align required to center divider img */
+    text-align: center;
+}
+
+#about p {
+    margin: 30px 0;
+}
+
+/* === BLOG SINGLE POST ===*/
+.blog-post-meta {
+    line-height: 2em;
+}
+.pager {
+	list-style: none;
+	background-color: #000000;
+	width: 25%;
+	padding: 20px;
+	justify-content: center;
+	text-align: center;
+	
+}
+.pager a {
+	color: #FFFFFF;
+}
+
+/* === BLOG SINGLE POST ===*/
+.blog-post-meta {
+    line-height: 2em;
+}
+
+/* === COMMENTS ===*/
+div#comments.comments-area {
+    border: 1px solid #494646;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.comment-body {
+    background: #eee;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+h2.comments-title {
+    background: url('images/divider-purple.png') center no-repeat;
+    height: 80px;
+    background-size: 300px 40px;
+    /* center on x 35px on y*/
+    background-position: center 35px;
+    margin-bottom: 30px;
+}
+
+/* seperate the comments from the leave a reply section */
+.comment-list {
+    margin-bottom: 60px;
+    border-bottom: 1px dashed;
+}
+
+p.comment-form-comment {
+    margin-top: 20px;
+}
+
+/* make comment text area full width */
+textarea#comment {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#submit {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* === COMMENTS ===*/
+div#comments.comments-area {
+    border: 1px solid #494646;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.comment-body {
+    background: #eee;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+h2.comments-title {
+    background: url('images/divider-purple.png') center no-repeat;
+    height: 80px;
+    background-size: 300px 40px;
+    /* center on x 35px on y*/
+    background-position: center 35px;
+    margin-bottom: 30px;
+}
+
+/* seperate the comments from the leave a reply section */
+.comment-list {
+    margin-bottom: 60px;
+    border-bottom: 1px dashed;
+}
+
+p.comment-form-comment {
+    margin-top: 20px;
+}
+
+/* make comment text area full width */
+textarea#comment {
+    width: 100%;
+    margin-bottom: 20px;
+	border: 1px solid #000000;
+}
+
+#submit {
+    width: 100%;
+    margin-top: 20px;
+}
+div#comments.comments-area input {
+    border: 1px solid #494646;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+form#searchform ul li {
+	list-style: none;
+}
+form#searchform input {
+	 border: 1px solid #494646;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+	
+}
+
+
+
+
+
+.blog-main .um  {
+	margin-left: 0px !important;
+}
+
+
+.author-engr a {
+	color: #494646 !important;
+}
+
+#wp-calendar {
+	width: 100% !important;
+	padding: 0px;
+	margin: 0px;
+}
+#calendar_wrap {
+	width: 100% !important;
+	padding: 0px;
+	margin: 0px;
+}
+
+.um-search-field {
+	border: 1px solid #000000;
+	
+}
+.sidebar-module #um-search-button {
+	margin-bottom: 10px !important;
+}
+.um-search-field  {
+	padding: 10px !important;
+}
+.sidebar-module #um-search-button {
+    position: absolute;
+    top: 34px !important;
+    right: 10px !important;
+}
+.sidebar-module  #wp-calendar  thead, .sidebar-module  #wp-calendar tbody {
+	padding: 0px !important;
+	
+}
+
+
+
+
+
+
+
+
+  
+
+
